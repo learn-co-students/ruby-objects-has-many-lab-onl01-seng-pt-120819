@@ -29,7 +29,7 @@ attr_accessor :name, :posts
   end 
   
   def self.post_count
-      Post.all.count 
+   all.count 
   
   end 
 end 
