@@ -11,26 +11,26 @@ attr_accessor :name, :posts
   end 
   
   def posts 
-    Post.all.select do |pts|
-      pts.author == self 
+      Post.all.select do |posts|
+      posts.author == self 
     end 
   end 
 
   def add_post(new_post)
-      self.posts << new_post
-      new_post.author = self 
-      @@post_count += 1
+      @posts << new_post
+      new_post.author = self
+   
   end 
   
   def add_post_by_title(post_title)
       post = Post.new(post_title)
       post.author = self 
-      @@post_count += 1
-      
+  
   end 
   
   def self.post_count
-      @@post_count += 1
+      Post.all.count 
+  
   end 
 end 
 
