@@ -16,7 +16,8 @@ class Song
     @name
   end
 
-  # def artist.name
-  #
-  # end
+  def artist_name
+    artist.name if artist
+  end
+
 end

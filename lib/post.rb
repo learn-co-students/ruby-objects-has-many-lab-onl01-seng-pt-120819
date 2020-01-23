@@ -16,7 +16,7 @@ class Post
     @title
   end
 
-  # def author_name
-  #
-  # end
+  def author_name
+    author.name if author
+  end
 end
