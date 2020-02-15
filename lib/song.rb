@@ -6,6 +6,14 @@ class Song
     @name = name
     save
   end
+  
+  def artist_name
+    if artist!=nil
+    @artist=artist.name
+    else
+      return nil
+    end
+  end
  
   def save
     @@all << self

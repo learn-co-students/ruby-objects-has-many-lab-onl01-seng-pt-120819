@@ -8,7 +8,11 @@ class Post
   end
 
   def author_name
-    return "Sophie"
+    if author!=nil
+    @author=author.name
+    else
+      return nil
+    end
   end
  
   def save
