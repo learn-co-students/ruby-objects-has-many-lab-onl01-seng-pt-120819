@@ -1,21 +1,13 @@
 class Author
   attr_accessor :name, :title
-  
-def songs
-    Song.all.select {|song| song.artist == self}
+  @@all=[]
+  def initialize(name)
+    @name = name
+    save
   end
   
-  def add_song(song)
-    song.artist = self
-  end
-  
-  def add_song_by_name(name)
-    song = Song.new(name)
-    add_song(song)
-  end
-  
-  def self.song_count
-    Song.all.length
+  def posts
+    #Author.all.select {|post| posts.artist == self}
   end
   
   def save
